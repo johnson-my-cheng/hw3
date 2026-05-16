@@ -1,0 +1,13 @@
+<h1><%= @the_place.name %></h1>
+
+<% @the_place.entries.each do |an_entry| %>
+  <h3><%= an_entry.title %></h3>
+  <p><%= an_entry.occurred_on %></p>
+  <p><%= an_entry.description %></p>
+<% end %>
+
+<br>
+<a href="/places/<%= @the_place.id %>/entries/new">New Post</a>
+
+<br><br>
+<a href="/places">Back to All Places</a>

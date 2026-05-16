@@ -1,0 +1,16 @@
+<h1>Add a New Place</h1>
+
+<form action="/places" method="post">
+  <!-- Rails CSRF protection token -->
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+
+  <div>
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="query_name">
+  </div>
+
+  <button type="submit">Add Place</button>
+</form>
+
+<br>
+<a href="/places">Back to Places</a>
